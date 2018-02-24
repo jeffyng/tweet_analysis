@@ -21,7 +21,7 @@ class Database:
 
 class CursorFromConnectionFromPool:
     def __init__(self):
-        self.connectio = None
+        self.connection = None
         self.cursor = None
 
     def __enter__(self):
