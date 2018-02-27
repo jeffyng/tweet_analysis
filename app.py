@@ -18,6 +18,8 @@ def homepage():
 
 @app.route('/login/twitter')
 def twitter_login():
+    if 'screen_name' in session:
+        return redirect(url_for('profile'))
     request_token = get_request_token()
     session['request_token'] = request_token
     return redirect(get_oauth_verifier_url(request_token))
