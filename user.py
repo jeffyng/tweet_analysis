@@ -38,7 +38,7 @@ class User:
         if response.status != 200:
             raise Exception('An error occurred during authorized_client Twitter API call')
 
-        return json.loads(content.encode('utf-8'))
+        return json.loads(content.decode('utf-8'))
 
 
 
