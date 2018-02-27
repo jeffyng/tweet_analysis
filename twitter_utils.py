@@ -36,4 +36,3 @@ def get_access_token(request_token, oauth_verifier):
     # Ask Twitter for an access token.
     response, content = client.request(constants.ACCESS_TOKEN_URL, 'POST')
     return dict(urlparse.parse_qsl(content.decode('utf-8')))
-    _
